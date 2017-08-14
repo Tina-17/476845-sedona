@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+
+    <header class='main-header'>
+      <nav class='main-navigation'>
+        <a class='main-header-logo'><img src='img/index-logo.svg' alt='Логотип сайта Седона '>
+        </a>
+        <ul class='site-navigation'>
+          <li><a href='info.html'>информация</a></li>
+          <li><a href='photo.html'>фото и видео</a></li>
+          <li><a href='state-map.jpg'>карта штата</a></li>
+          <li><a href='hotels.html'>гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class='hotels'>
+
+      <section class='filters'>
+        <form class='filters' method='post'>
+          <fieldset>
+            <legend>Инфраструктура</legend>
+              <label><input type='checkbox' checked>
+                    Бассейн
+              </label>
+              <label><input type='checkbox'>
+                    Парковка
+                    </label>
+              <label><input type='checkbox'>
+                    wi-fi
+              </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Тип жилья</legend>
+              <label><input type='checkbox' checked>
+                    Гостиница
+              </label>
+              <label><input type='checkbox' checked>
+                    Мотель
+                    </label>
+              <label><input type='checkbox' checked>
+                    Апартаменты
+              </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Стоимость в сутки (р):</legend>
+            <input type='text' value='от 0'>
+            <input type='text' value='до 3000'>
+
+      <!-- Здесь будет бегунок-->
+
+          </fieldset>
+          <input type='submit' value='Показать'>
+        </form>
+      </section>
+
+      <section class='result'>
+        <h2>Найдено: 3</h2>
+        <span>сортировка</span>
+        <a href='#'>по цене</a>
+        <a href='#'>по типу</a>
+        <a href='#'>по рейтингу</a>
+        <a href='#' class='up'></a>
+        <a href='#' class='down'></a>
+
+        <ul class='result'>
+            <li>
+              <a href='#'><img src='#' alt='Фото гостиницы'></a>
+
+              <div class='details'>
+                <h3>Amara resort & SPA</h3>
+                <div>
+                  Гостиница
+                  <a href='#'>Подробнее</a>
+                </div>
+                <div>
+                  от 4000 р.
+                  <a href='#'>Забронировать</a>
+                </div>
+              </div>
+
+              <div class='rating'>
+                <span class='stars x4'></span>
+                <span>
+                  Рейтинг: 8,5
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <a href='#'><img src='#' alt='Фото мотеля'></a>
+
+              <div class='details'>
+                <h3>Desert quail inn</h3>
+                <div>
+                  Мотель
+                  <a href='#'>Подробнее</a>
+                </div>
+                <div>
+                  от 3000 р.
+                  <a href='#'>Забронировать</a>
+                </div>
+              </div>
+
+              <div class='rating'>
+                <span class='stars x3'></span>
+                <span>
+                  Рейтинг: 8,9
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <a href='#'><img src='#' alt='Фото апартаментов'></a>
+
+              <div class='details'>
+                <h3>Villas at poco diablo</h3>
+                <div>
+                  Апартаменты
+                  <a href='#'>Подробнее</a>
+                </div>
+                <div>
+                  от 2000 р.
+                  <a href='#'>Забронировать</a>
+                </div>
+              </div>
+
+              <div class='rating'>
+                <span class='stars x2'></span>
+                <span>
+                  Рейтинг: 9,2
+                </span>
+              </div>
+            </li>
+          </ul>
+      </section>
+    </main>
+
+    <footer class='main-footer'>
+      <section class='footer-hashtag'>
+        <p><a href=''>#visitsedona</a></p>
+      </section>
+      <section class='footer-social'>
+        <ul >
+          <li><a class='social-button' href='#'>Вконтакте</a></li>
+          <li><a class='social-button' href='#'>Фейсбук</a></li>
+          <li><a class='social-button' href='#'>Инстаграм</a></li>
+        </ul>
+      </section>
+      <section class='footer-logo-academy'>
+        <p>website by</p>
+        <a href='https://htmlacademy.ru/intensive/htmlcss'>
+          <img src='#' alt='Логотип  html академии'>
+        </a>
+      </section>
+    </footer>
+
+  </body>
+</html>
