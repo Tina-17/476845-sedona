@@ -3,23 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href='css/normalize.css' rel='stylesheet'>
+    <link rel='stylesheet' href='css/style.css'>
   </head>
-  <body>
+  <body class="inner-page">
 
     <header class='main-header'>
       <nav class='main-navigation'>
         <a class='main-header-logo' href='index.html'><img src='img/logo.jpg' width='134' height='68' alt='Логотип сайта Седона '>
         </a>
         <ul class='site-navigation'>
-          <li><a href='info.html'>информация</a></li>
-          <li><a href='photo.html'>фото и видео</a></li>
-          <li><a href='state-map.jpg'>карта штата</a></li>
-          <li><a href='hotels.html'>гостиницы</a></li>
+          <li><a href='#'>информация</a></li>
+          <li><a href='#'>фото и видео</a></li>
+          <li><a href='img/state-map.jpg'>карта штата</a></li>
+          <li><a class='active' href='hotels.html'>гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class='hotels'>
+    <main class='container'>
 
       <section class='filters'>
         <form class='filters' method='post'>
@@ -53,33 +55,37 @@
             <legend>Стоимость в сутки (р):</legend>
             <input type='text' value='от 0'>
             <input type='text' value='до 3000'>
-            <input type='range'>
           </fieldset>
 
-          <input type='submit' value='Показать'>
+          <div class='range'></div>
+
+          <input class='button' type='submit' value='Показать'>
         </form>
       </section>
 
       <section class='result'>
-        <h2>Найдено: 3</h2>
+        <p>Найдено: 3</p>
         <span>сортировка</span>
-        <a href='#'>по цене</a>
-        <a href='#'>по типу</a>
-        <a href='#'>по рейтингу</a>
-        <a href='#' class='up'></a>
-        <a href='#' class='down'></a>
-
-        <ul class='result'>
+        <div class='result-choice'>
+          <a class='active' href='#'>по цене</a>
+          <a href='#'>по типу</a>
+          <a href='#'>по рейтингу</a>
+          <a href='#' class='up'></a>
+          <a href='#' class='down'></a>
+        </div>
+        <ul class='result-list'>
             <li>
               <a href='#'><img src='img/hotel-1.jpg' alt='Фото гостиницы'></a>
 
-              <div class='details'>
-                <h3>Amara resort & SPA</h3>
-                <div>
+              <div class='variant'>
+                <div class='name'>
+                  <a href='#'>Amara resort & SPA</a>
+                </div>
+                <div class='details'>
                   Гостиница
                   <a href='#'>Подробнее</a>
                 </div>
-                <div>
+                <div class='book'>
                   от 4000 р.
                   <a href='#'>Забронировать</a>
                 </div>
@@ -96,13 +102,15 @@
             <li>
               <a href='#'><img src='img/hotel-2.jpg' alt='Фото мотеля'></a>
 
-              <div class='details'>
-                <h3>Desert quail inn</h3>
-                <div>
+              <div class='variant'>
+                <div class='name'>
+                  <a href='#'>Desert quail inn</a>
+                </div>
+                <div class='details'>
                   Мотель
                   <a href='#'>Подробнее</a>
                 </div>
-                <div>
+                <div class='book'>
                   от 3000 р.
                   <a href='#'>Забронировать</a>
                 </div>
@@ -119,13 +127,15 @@
             <li>
               <a href='#'><img src='img/hotel-3.jpg' alt='Фото апартаментов'></a>
 
-              <div class='details'>
-                <h3>Villas at poco diablo</h3>
-                <div>
+              <div class='variant'>
+                <div class='name'>
+                  <a>Villas at poco diablo</a>
+                </div>
+                <div class='details'>
                   Апартаменты
                   <a href='#'>Подробнее</a>
                 </div>
-                <div>
+                <div class='book'>
                   от 2000 р.
                   <a href='#'>Забронировать</a>
                 </div>
@@ -148,9 +158,9 @@
       </section>
       <section class='footer-social'>
         <ul >
-          <li><a class='social-button' href='#'>Вконтакте</a></li>
-          <li><a class='social-button' href='#'>Фейсбук</a></li>
-          <li><a class='social-button' href='#'>Инстаграм</a></li>
+          <li><a class='social-button' href='#'><img src='img/twitter.svg' alt='Иконка твиттер'></a></li>
+          <li><a class='social-button' href='#'><img src='img/fb-icon.svg' alt='Иконка фейсбук'></a></li>
+          <li><a class='social-button' href='#'><img src='img/youtube.svg' alt='Иконка ютуб'></a></li>
         </ul>
       </section>
       <section class='footer-logo-academy'>

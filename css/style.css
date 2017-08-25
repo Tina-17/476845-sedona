@@ -1,21 +1,272 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/ptsans/PTSans/PTS55F.ttf');
+}
+
+@font-face {
+  font-family: 'PT Sans Bold';
+  font-style: bold;
+  font-weight: 700;
+  src: url('fonts/ptsans/PTSans/PTS75F.ttf');
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: PT Sans, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.main-navigation,
+.container,
+.main-footer  {
+    width: 1200px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+
+.main-navigation a,
+.search-form a,
+.main-footer a,
+.result a {
+  text-decoration: none;
+ }
+
+.main-navigation{
+  line-height: 26px;
+  font-family: PT Sans Bold;
+  }
+
+.site-navigation,
+.reasons-list,
+.reasons-1-recommendation,
+.footer-social ul,
+.result-list {
+  list-style: none;
+}
+
+.site-navigation a,
+.main-footer a  {
+  color: #000000;
+}
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:focus {
+  color: #b2b2b2;
+}
+
+.site-navigation a:active {
+  color: #766357;
+}
+
+nav.main-navigation a.active {
+  color: #766357;
+}
+
+.slogan p{
+  font-size: 21px;
+  font-family: 'PT Sans Bold';
+  line-height: 26px;
+}
+
+.reasons p:first-child{
+  font-size: 14px;
+  line-height: 26px;
 }
 
 h2  {
-    font-size: 21px;
-    line-height: 26px;
-    font-family: PT-Sans;
-    font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  font-family: 'PT Sans Bold';
+  }
 
+.reason-1,
+.reason-2 {
+  width: 400px;
+  height: 256px;
+  background: #81b3d2;
+  color: #ffffff;
 }
 
-h3  {
-    font-size: 14px;
-    line-height: 26px;
-    font-family: PT-Sans Regular;
+.reasons-1-recommendation-house h2::before  {
+  content: url('../img/icon-1.svg');
+}
 
+.reasons-1-recommendation-food h2::before  {
+  content: url('../img/icon-3.svg');
+}
+
+.reasons-1-recommendation-souvenir h2::before  {
+  content: url('../img/icon-2.svg');
+}
+
+.search p:first-child {
+  font-family: 'PT Sans Bold';
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.search p:nth-child(2)  {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.search-form .search-button {
+   display: block;
+   width: 568px;
+   height: 87px;
+   background: #766357;
+   color: #ffffff;
+   font-family: 'PT Sans Bold';
+   font-size: 21px;
+   line-height: 26px;
+}
+
+.search-form .search-button:hover {
+  background: #604e43;
+}
+
+.search-form .search-button:focus  {
+    background: #503e33;
+    color: #857871;
+}
+
+.footer-hashtag p,
+.result p  {
+  font-family: 'PT Sans Bold';
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer-logo-academy p{
+  line-height: 26px;
+}
+.footer-social li {
+  width: 46px;
+  height: 48px;
+  background: #81b3d2;
+  float: left;
+  margin: 3px;
+}
+
+/*Внутренняя страница*/
+
+
+.filters fieldset  {
+   border: none;
+}
+
+.filters legend,
+.button {
+  font-family: 'PT Sans Bold';
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
 
 }
+ .filters form{
+  background: url('../img/filter-background.jpg');
+  color: #ffffff;
+}
+
+.result span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.result-choice a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #b2b2b2;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b2d2;
+}
+
+.result-choice a:hover {
+  color: #81b2d2;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b2d2;
+}
+
+.result-choice a:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.result-choice a:active  {
+  color: #81b2d2;
+  text-decoration: none;
+}
+
+.result-choice .active {
+  color: #81b2d2;
+  text-decoration: none;
+}
+
+.name a {
+  font-family: 'PT Sans Bold';
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+.name a:hover {
+  color: #81b2d2;
+}
+.name a:focus {
+  color: #cacaca;
+}
+
+.details a,
+.book a {
+  font-family: 'PT Sans Bold';
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  display: block;
+  height: 27px;
+}
+
+.details a {
+  width: 110px;
+  background: #81b2d2;
+}
+.details a:hover  {
+  background: #669ec0;
+}
+.details a:focus  {
+  background: #5496bd;
+  color: #88b6d1;
+}
+
+.book a {
+  width: 142px;
+  background: #766357;
+}
+.book a:hover {
+  background: #604e43;
+}
+.book a:focus {
+  background: #503e33;
+  color: #857871;
+}
+
+
+
+
+
+
+
+
+
+
