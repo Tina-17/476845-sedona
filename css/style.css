@@ -23,140 +23,382 @@ body {
   line-height: 21px;
 }
 
-.main-navigation,
-.container,
-.main-footer  {
-    width: 1200px;
-    background: #ffffff;
-    margin: 0 auto;
+
+nav.main-navigation,
+main.container,
+footer.main-footer  {
+  width: 1200px;
+  background: #ffffff;
+  margin: 0 auto;
 }
 
-.main-navigation a,
-.search-form a,
-.main-footer a,
-.result a {
+a {
   text-decoration: none;
+  color: #000000;
  }
 
-.main-navigation{
-  line-height: 26px;
-  font-family: PT Sans Bold;
-  }
-
-.site-navigation,
-.reasons-list,
-.reasons-1-recommendation,
-.footer-social ul,
-.result-list {
-  list-style: none;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.site-navigation a,
-.main-footer a  {
+ul.site-navigation,
+ul.reasons-list,
+ul.reasons-1-recommendation,
+section.footer-social ul,
+ul.result-list   {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+          /* Навигация */
+
+ul.site-navigation a{
   color: #000000;
 }
 
-.site-navigation a:hover {
+ul.site-navigation {
+  padding: 15px 6%;
+}
+
+nav.main-navigation{
+  line-height: 26px;
+  font-family: PT Sans Bold;
+  padding: 0;
+  position: relative;
+  }
+
+nav.main-navigation a.main-header-logo {
+  position: absolute;
+  top: 0;
+  left: 533px;
+ }
+
+ul.site-navigation a:hover {
   color: #81b3d2;
 }
 
-.site-navigation a:focus {
+ul.site-navigation a:focus {
   color: #b2b2b2;
 }
 
-.site-navigation a:active {
+ul.site-navigation a:active {
   color: #766357;
 }
 
 nav.main-navigation a.active {
   color: #766357;
 }
+ul.site-navigation  {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
-.slogan p{
+}
+ul.site-navigation li{
+  flex-basis: 20%;
+}
+
+ul.site-navigation li:last-child,
+ul.site-navigation li:nth-child(3)  {
+  text-align: right;
+}
+
+ul.site-navigation li:nth-child(3)  {
+  margin-left: 20%;
+}
+
+            /* Фото и название */
+
+h1.visually-hidden  {
+  display: none;
+}
+
+section.big-photo img{
+  display: block;
+}
+
+          /* Слоган */
+
+section.slogan {
+  padding-top: 60px;
+  padding-bottom: 57px;
+  box-sizing: border-box;
+  display: flex;
+  height: 217px;
+  flex-direction: column;
+}
+
+section.slogan p:first-child{
   font-size: 21px;
   font-family: 'PT Sans Bold';
-  line-height: 26px;
+  line-height: 25px;
+  margin: 0;
 }
-
-.reasons p:first-child{
+section.slogan p:last-child{
   font-size: 14px;
-  line-height: 26px;
+  line-height:12px;
+  padding-top: 38px;
+  margin: 0;
+ }
+section.slogan,
+section.reasons {
+  text-align: center;
 }
 
-h2  {
+          /* Причины крутизны Седоны (список)- 1 и 2 */
+
+ul.reasons-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.reasons-wrapper {
+  display: flex;
+}
+
+ul.reasons-list h2  {
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   line-height: 21px;
   font-family: 'PT Sans Bold';
   }
 
-.reason-1,
-.reason-2 {
+div.reasons-1 p,
+div.reasons-2 p {
+  margin: 0;
+}
+
+div.reasons-1,
+div.reasons-2 {
   width: 400px;
   height: 256px;
   background: #81b3d2;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 64px;
+}
+            /* Рекомендации - вложенный список */
+
+ul.reasons-1-recommendation {
+  display: flex;
+  height: 330px;
+
 }
 
-.reasons-1-recommendation-house h2::before  {
+ul.reasons-1-recommendation p{
+  margin: 0;
+}
+
+ul.reasons-1-recommendation li{
+  flex-basis: 400px;
+}
+
+li.reasons-1-recommendation-house::before  {
   content: url('../img/icon-1.svg');
+  display: block;
 }
 
-.reasons-1-recommendation-food h2::before  {
+li.reasons-1-recommendation-food::before  {
   content: url('../img/icon-3.svg');
+  display: block;
 }
 
-.reasons-1-recommendation-souvenir h2::before  {
+li.reasons-1-recommendation-souvenir::before  {
   content: url('../img/icon-2.svg');
+  display: block;
 }
 
-.search p:first-child {
+li.reasons-1-recommendation-house,
+li.reasons-1-recommendation-food,
+li.reasons-1-recommendation-souvenir {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 87px;
+
+}
+
+li.reasons-1-recommendation-souvenir {
+  padding-top: 55px;
+}
+
+            /* Причины 3, 4, 5 */
+
+li.reasons-3,
+li.reasons-4,
+li.reasons-5  {
+  flex-basis: 400px;
+  height: 256px;
+  background: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 64px;
+ }
+
+li.reasons-3 p,
+li.reasons-4 p,
+li.reasons-5 p{
+  margin: 0;
+}
+
+
+
+            /* Поиск гостиницы */
+
+
+div.question  {
+  text-align: center;
+
+ }
+
+section.search p:first-child {
   font-family: 'PT Sans Bold';
   font-size: 30px;
   line-height: 36px;
 }
 
-.search p:nth-child(2)  {
+section.search p:nth-child(2)  {
   font-size: 14px;
   line-height: 24px;
 }
 
-.search-form .search-button {
-   display: block;
-   width: 568px;
+div.search-form {
+  position: relative;
+  background: #ffffff;
+  width: 570px;
+  height: 484px;
+  display: inline-block;
+}
+
+div.search-form form  {
+  position: absolute;
+}
+
+div.search-form a.search-button {
+   display: inline-block;
+   width: 570px;
    height: 87px;
    background: #766357;
    color: #ffffff;
    font-family: 'PT Sans Bold';
    font-size: 21px;
-   line-height: 26px;
+   line-height: 87px;
+   vertical-align: center;
+   text-align: center;
+
 }
 
-.search-form .search-button:hover {
+
+div.search-form a.search-button:hover {
   background: #604e43;
 }
 
-.search-form .search-button:focus  {
+div.search-form a.search-button:focus  {
     background: #503e33;
     color: #857871;
 }
 
-.footer-hashtag p,
-.result p  {
+
+div.search-form form label{
+  font-family: 'PT Sans Bold';
+  font-size: 14px;
+  line-height: 26px;
+  display: block;
+  margin-left: 56px;
+}
+div.search-form form input {
+  font: inherit;
+  background: #f2f2f2;
+  border: none;
+
+}
+
+div.search-form button.find{
+   width: 458px;
+   height: 59px;
+   background: #81b2d2;
+   border: none;
+   padding: 0;
+   font-family: 'PT Sans Bold';
+   font-size: 21px;
+   line-height: 26px;
+   color: #ffffff;
+   text-transform: uppercase;
+                          /* НЕ встает на место*/
+   margin-left: 56px;
+   margin-bottom: 56px;
+}
+
+div.search-form button.find:hover {
+  background: #669ec0;
+}
+
+div.search-form button.find:focus {
+  background: #5496bd;
+  color: #88b6d1;
+}
+
+                  /* Подвал */
+
+footer.main-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+section.footer-hashtag p,
+section.result p  {
   font-family: 'PT Sans Bold';
   font-size: 21px;
   line-height: 26px;
 }
 
-.footer-logo-academy p{
-  line-height: 26px;
+section.footer-social ul  {
+  display: flex;
 }
-.footer-social li {
+
+section.footer-social a {
   width: 46px;
   height: 48px;
   background: #81b3d2;
-  float: left;
+
   margin: 3px;
+
+  }
+
+section.footer-social a:hover  {
+  background: #669ec0;
 }
+section.footer-social a:focus  {
+  background: #5496bd;
+  color: #88b6d1;           /* иконки не перекрасились!!!*/
+
+}
+
+section.footer-logo-academy p{
+  line-height: 26px;
+}
+
+section.footer-logo-academy a:hover{   /* не перекрашивается*/
+  color: #81b3d2;
+}
+
+section.footer-logo-academy a:focus{
+  color: #bdbbbc;
+}
+
+
 
 /*Внутренняя страница*/
 
@@ -177,6 +419,7 @@ h2  {
   background: url('../img/filter-background.jpg');
   color: #ffffff;
 }
+
 
 .result span {
   font-size: 12px;

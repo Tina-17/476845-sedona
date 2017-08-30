@@ -236,7 +236,7 @@ svg:not(:root) {
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
-
+/*
 button,
 input,
 optgroup,
@@ -247,6 +247,7 @@ textarea {
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
+*/
 
 /**
  * Show the overflow in IE.
@@ -297,12 +298,12 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring,
+/*button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
-}
+}*/
 
 /**
  * Correct the padding in Firefox.
