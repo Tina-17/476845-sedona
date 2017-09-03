@@ -23,55 +23,55 @@
 
     <main class='container inner'>
 
-      <section class='filters'>
+      <section class='filter-hotel'>
         <form class='filters' method='post'>
-          <fieldset>
-            <legend>Инфраструктура</legend>
-              <label><input type='checkbox' checked>
+          <div class='infra option'>
+            <h3>Инфраструктура</h3>
+            <label><input type='checkbox' checked>
                     Бассейн
-              </label>
-              <label><input type='checkbox'>
+            </label>
+            <label><input type='checkbox'>
                     Парковка
-                    </label>
-              <label><input type='checkbox'>
+            </label>
+            <label><input type='checkbox'>
                     wi-fi
-              </label>
-          </fieldset>
+            </label>
+          </div>
 
-          <fieldset>
-            <legend>Тип жилья</legend>
-              <label><input type='checkbox' checked>
+          <div class='home option'>
+            <h3>Тип жилья</h3>
+            <label><input type='checkbox' checked>
                     Гостиница
-              </label>
-              <label><input type='checkbox' checked>
+            </label>
+            <label><input type='checkbox' checked>
                     Мотель
-                    </label>
-              <label><input type='checkbox' checked>
+            </label>
+            <label><input type='checkbox' checked>
                     Апартаменты
-              </label>
-          </fieldset>
+            </label>
+          </div>
 
-          <fieldset>
-            <legend>Стоимость в сутки (р):</legend>
+          <div class='price option'>
+            <h3>Стоимость в сутки (р):</h3>
             <input type='text' value='от 0'>
             <input type='text' value='до 3000'>
-          </fieldset>
-
-          <div class='range'></div>
-
-          <input class='button' type='submit' value='Показать'>
+            <div class='range'></div>
+            <input class='button' type='submit' value='Показать'>
+           </div>
         </form>
       </section>
 
       <section class='result'>
-        <p>Найдено: 3</p>
-        <span>сортировка</span>
+
         <div class='result-choice'>
-          <a class='active' href='#'>по цене</a>
-          <a href='#'>по типу</a>
-          <a href='#'>по рейтингу</a>
-          <a href='#' class='up'></a>
-          <a href='#' class='down'></a>
+          <p>Найдено: 3</p>
+          <span>сортировка</span>
+
+            <a class='active' href='#'>по цене</a>
+            <a href='#'>по типу</a>
+            <a href='#'>по рейтингу</a>
+            <a href='#' class='up'></a>
+            <a href='#' class='down'></a>
         </div>
         <ul class='result-list'>
             <li>

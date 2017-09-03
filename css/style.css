@@ -21,8 +21,8 @@ body {
   background-color: #f2f2f2;
   font-size: 14px;
   line-height: 21px;
+  position: relative;
 }
-
 
 nav.main-navigation,
 main.container,
@@ -109,11 +109,6 @@ ul.site-navigation li:nth-child(3)  {
   margin-left: 20%;
 }
 
-            /* Фото и название */
-
-h1.visually-hidden  {
-  display: none;
-}
 
 section.big-photo img{
   display: block;
@@ -122,11 +117,10 @@ section.big-photo img{
           /* Слоган */
 
 section.slogan {
-  padding-top: 60px;
+  padding-top: 65px;
   padding-bottom: 57px;
   box-sizing: border-box;
   display: flex;
-  height: 217px;
   flex-direction: column;
 }
 
@@ -136,12 +130,14 @@ section.slogan p:first-child{
   line-height: 25px;
   margin: 0;
 }
+
 section.slogan p:last-child{
   font-size: 14px;
-  line-height:12px;
-  padding-top: 38px;
+  line-height:26px;
+  padding-top: 19px;
   margin: 0;
  }
+
 section.slogan,
 section.reasons {
   text-align: center;
@@ -174,7 +170,7 @@ div.reasons-2 p {
 div.reasons-1,
 div.reasons-2 {
   width: 400px;
-  height: 256px;
+  min-height: 256px;
   background: #81b3d2;
   color: #ffffff;
   display: flex;
@@ -188,8 +184,7 @@ div.reasons-2 {
 
 ul.reasons-1-recommendation {
   display: flex;
-  height: 330px;
-
+  min-height: 330px;
 }
 
 ul.reasons-1-recommendation p{
@@ -224,7 +219,6 @@ li.reasons-1-recommendation-souvenir {
   box-sizing: border-box;
   padding-top: 60px;
   padding-bottom: 87px;
-
 }
 
 li.reasons-1-recommendation-souvenir {
@@ -237,8 +231,8 @@ li.reasons-3,
 li.reasons-4,
 li.reasons-5  {
   flex-basis: 400px;
-  height: 256px;
-  background: #eeeeee;
+  min-height: 256px;
+  background: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -254,42 +248,42 @@ li.reasons-5 p{
 }
 
 
-
             /* Поиск гостиницы */
 
-
-div.question  {
-  text-align: center;
-
+section.search  {
+  background-image: url('../img/state-map.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 593px;
  }
 
 section.search p:first-child {
   font-family: 'PT Sans Bold';
   font-size: 30px;
   line-height: 36px;
+  padding-top: 47px;
+  padding-bottom: 30px;
+  margin: 0;
+  text-align: center;
 }
 
 section.search p:nth-child(2)  {
+  font-family: 'PT Sans Bold';
   font-size: 14px;
   line-height: 24px;
+  padding-bottom: 42px;
+  margin:0;
+  text-align: center;
 }
 
-div.search-form {
+div.search-wrapper  {
   position: relative;
-  background: #ffffff;
-  width: 570px;
-  height: 484px;
-  display: inline-block;
 }
 
-div.search-form form  {
-  position: absolute;
-}
-
-div.search-form a.search-button {
-   display: inline-block;
+div.search-wrapper a.search-button {
+   display: block;
    width: 570px;
-   height: 87px;
+   min-height: 87px;
    background: #766357;
    color: #ffffff;
    font-family: 'PT Sans Bold';
@@ -297,38 +291,168 @@ div.search-form a.search-button {
    line-height: 87px;
    vertical-align: center;
    text-align: center;
+   margin: 0 auto;
+ }
 
-}
-
-
-div.search-form a.search-button:hover {
+div.search-wrapper a.search-button:hover {
   background: #604e43;
 }
 
-div.search-form a.search-button:focus  {
+div.search-wrapper a.search-button:active {
     background: #503e33;
     color: #857871;
 }
 
+div.search-form {
+  position: absolute;
+  background: #ffffff;
+  width: 570px;
+  height: 394px;
+  top: 87px;
+  left: 315px;
+  padding: 55px;
+  box-sizing: border-box;
+}
+div.search-form form {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 100%;
+}
 
 div.search-form form label{
   font-family: 'PT Sans Bold';
   font-size: 14px;
   line-height: 26px;
-  display: block;
-  margin-left: 56px;
+  flex-basis: 100%;
+  display: flex;
+  cursor: pointer;
 }
+
+div.search-form form label:nth-child(3),
+div.search-form form label:nth-child(4){
+  flex-basis: 50%;
+}
+
+div.search-form span{
+  flex-grow: 1;
+  align-self: center;
+}
+
+div.search-form form label:nth-child(4) span{
+  padding-left: 53px;
+}
+
 div.search-form form input {
   font: inherit;
+  text-transform: uppercase;
   background: #f2f2f2;
   border: none;
+  width: 346px;
+  height: 40px;
+  padding-left: 13px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+div.search-form form input:hover  {
+  background: #ebebeb;
+}
+
+div.search-form form input:focus  {
+  background: #ffffff;
+  outline: 2px solid #ebebeb;
+}
+
+
+div.search-form form input[name='date-in'],
+div.search-form fofm input[name='date-out'] {
+  padding-right: 40px;
+}
+
+div.search-form form label:nth-child(1),
+div.search-form form label:nth-child(2) {
+  position: relative;
+}
+
+div.search-form button.calendar {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  width: 21px;
+  height: 22px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  color: #cacaca;
+  cursor: pointer;
+  outline: none;
+}
+
+svg {
+  fill: currentColor;
+}
+
+div.search-form button.calendar:hover {
+  color: #231f20;
+}
+
+div.search-form button.calendar:active {
+  color: #81b2d2;
+  outline: none;
+}
+
+
+div.search-form form input[name='child'],
+div.search-form form input[name='big'] {
+  width: 37px;
+  margin-left: 0;
 
 }
+div.search-form button.change-minus,
+div.search-form button.change-plus {
+  border: none;
+  width: 39px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+ }
+
+div.search-form button.change-plus {
+  background: #f2f2f2 url('../img/plus.png') no-repeat;
+  background-position: 50% 50%;
+
+}
+
+div.search-form button.change-minus {
+  background: #f2f2f2 url('../img/minus.png') no-repeat;
+  background-position: 50% 50%;
+
+}
+
+div.search-form button.change-minus:hover{
+  background: #f2f2f2 url('../img/minus-1.png') 50% 50% no-repeat;
+}
+div.search-form button.change-plus:hover{
+  background: #f2f2f2 url('../img/plus-1.png') 50% 50% no-repeat;
+}
+
+div.search-form button.change-minus:active{
+  background: #f2f2f2 url('../img/minus-2.png') 50% 50% no-repeat;
+  outline: none;
+}
+
+div.search-form button.change-plus:active{
+  background: #f2f2f2 url('../img/plus-2.png') 50% 50% no-repeat;
+  outline: none;
+}
+
 
 div.search-form button.find{
    width: 458px;
    height: 59px;
-   background: #81b2d2;
+   background: #81b3d2;
    border: none;
    padding: 0;
    font-family: 'PT Sans Bold';
@@ -336,90 +460,141 @@ div.search-form button.find{
    line-height: 26px;
    color: #ffffff;
    text-transform: uppercase;
-                          /* НЕ встает на место*/
-   margin-left: 56px;
-   margin-bottom: 56px;
+   display: inline-block;
+   cursor: pointer;
 }
 
 div.search-form button.find:hover {
   background: #669ec0;
 }
 
-div.search-form button.find:focus {
+div.search-form button.find:active {
   background: #5496bd;
   color: #88b6d1;
 }
 
+
                   /* Подвал */
 
-footer.main-footer {
+footer.main-footer{
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  padding: 12px 101px 12px 132px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  left: calc(50% - 600px);
+
 }
 
-section.footer-hashtag p,
+footer.main-footer p.footer-hashtag,
 section.result p  {
   font-family: 'PT Sans Bold';
   font-size: 21px;
   line-height: 26px;
 }
 
-section.footer-social ul  {
+ section.footer-social ul {
   display: flex;
+  margin-left: 132px;
 }
 
 section.footer-social a {
+  display: flex;
   width: 46px;
   height: 48px;
   background: #81b3d2;
-
   margin: 3px;
-
   }
+
+section.footer-social a svg {
+  margin: auto;
+  stroke: none;
+}
 
 section.footer-social a:hover  {
   background: #669ec0;
 }
-section.footer-social a:focus  {
+section.footer-social a:active  {
   background: #5496bd;
-  color: #88b6d1;           /* иконки не перекрасились!!!*/
-
 }
 
-section.footer-logo-academy p{
+section.footer-social a:active svg {
+  opacity: 0.3;
+}
+
+footer.main-footer p.author{
   line-height: 26px;
+  font-size: 12px;
+  padding: 0;
 }
 
-section.footer-logo-academy a:hover{   /* не перекрашивается*/
+footer.main-footer a.logo-academy:hover{
   color: #81b3d2;
 }
 
-section.footer-logo-academy a:focus{
+footer.main-footer a.logo-academy:active{
   color: #bdbbbc;
 }
-
 
 
 /*Внутренняя страница*/
 
 
-.filters fieldset  {
-   border: none;
+main.inner  {
+  padding-bottom: 120px;
 }
 
-.filters legend,
-.button {
+/* Фильтр*/
+
+section.filter-hotel form {
+  display: flex;
+  justify-content: space-between;
+  height: 217px;
+  box-sizing: border-box;
+  padding: 30px 73px;
+}
+
+div.infra,
+div.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form.filters h3,
+form.button {
   font-family: 'PT Sans Bold';
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
+  margin: 0;
 
 }
- .filters form{
+ section.filter-hotel form{
   background: url('../img/filter-background.jpg');
   color: #ffffff;
 }
 
+
+/*Результат поиска*/
+
+div.result-choice {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+div.result-choice {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .result span {
   font-size: 12px;
@@ -452,10 +627,25 @@ section.footer-logo-academy a:focus{
   text-decoration: none;
 }
 
-.result-choice .active {
+.result-choice :active {
   color: #81b2d2;
   text-decoration: none;
 }
+
+ul.result-list li {
+  display: flex;
+  padding: 30px 0;
+  border: 1px solid #f2f2f2;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+
+div.details,
+div.book {
+  display: inline-block;
+}
+
 
 .name a {
   font-family: 'PT Sans Bold';
@@ -483,6 +673,7 @@ section.footer-logo-academy a:focus{
 .details a {
   width: 110px;
   background: #81b2d2;
+
 }
 .details a:hover  {
   background: #669ec0;
