@@ -24,6 +24,13 @@ body {
   position: relative;
 }
 
+.site-shadow {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+  width: 1200px;
+  position: absolute;
+  left: calc(50% - 600px);
+}
+
 .main-navigation,
 .container,
 .main-footer  {
@@ -63,7 +70,7 @@ img {
 }
 
 .main-navigation{
-  line-height: 26px;
+  line-height: 25px;
   font-family: PT Sans Bold;
   padding: 0;
   position: relative;
@@ -71,20 +78,16 @@ img {
 
 .main-navigation .main-header-logo {
   position: absolute;
-  top: 0;
-  left: 533px;
+  top: 0px;
+  left: 531px;
  }
 
 .site-navigation a:hover {
   color: #81b3d2;
 }
 
-.site-navigation a:focus {
-  color: #b2b2b2;
-}
-
 .site-navigation a:active {
-  color: #766357;
+  color: #b2b2b2;
 }
 
 .site-navigation .active {
@@ -98,6 +101,8 @@ img {
 }
 .site-navigation li{
   flex-basis: 20%;
+  box-sizing: border-box;
+
 }
 
 .site-navigation li:last-child,
@@ -105,14 +110,31 @@ img {
   text-align: right;
 }
 
+.site-navigation li:nth-child(2) {
+  padding-left: 30px;
+}
+
 .site-navigation li:nth-child(3)  {
   margin-left: 20%;
+  padding-right: 34px;
 }
 
 
-.big-photo img{
+.big-photo {
   display: block;
+  background-color: #deebf3;
+  background-image: url('../img/sedona-mask.png'), url('../img/sedona-nature.jpg');
+  background-repeat: no-repeat;
+  height: 507px;
+  text-align: center;
+  background-position: left bottom;
 }
+
+.big-photo img {
+  display: inline-block;
+  margin-top: 77px;
+}
+
 
           /* Слоган */
 
@@ -135,6 +157,7 @@ img {
 .slogan p{
   font-size: 14px;
   line-height:26px;
+  color: #333333;
   padding-top: 19px;
   margin: 0;
  }
@@ -194,6 +217,9 @@ img {
   min-height: 330px;
 }
 
+.reasons-1-recommendation p {
+  color: #333333;
+}
 
 .reasons-1-recommendation li{
   flex-basis: 400px;
@@ -245,6 +271,12 @@ img {
   padding-bottom: 64px;
  }
 
+.reasons-3,
+.reasons-4,
+.reasons-5  {
+  color: #333333;
+}
+
             /* Поиск гостиницы */
 
 
@@ -265,6 +297,7 @@ img {
   padding-bottom: 42px;
   margin:0;
   text-align: center;
+  color: #333333;
 }
 
 .search-button {
@@ -322,7 +355,6 @@ img {
   flex-basis: 100%;
   display: flex;
   position: relative;
-
 }
 
 .search-form .grownup,
@@ -452,6 +484,11 @@ svg {
   color: #88b6d1;
 }
 
+.search-form {
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+
 
                   /* Подвал */
 
@@ -472,11 +509,12 @@ svg {
   font-family: 'PT Sans Bold';
   font-size: 21px;
   line-height: 26px;
+  margin-bottom: 23px;
 }
 
 .footer-social ul {
   display: flex;
-  margin-left: 20px;
+  margin-left: 29px;
 }
 
 .footer-social a {
@@ -509,9 +547,9 @@ svg {
 }
 
 .main-footer .author{
-  line-height: 26px;
-  font-size: 12px;
-  padding-right: 9px;
+  line-height: 21px;
+  font-size: 14px;
+  padding-right: 4px;
   display: inline-block;
 }
 
@@ -547,7 +585,7 @@ main.inner  {
 }
 
 .filters label {
-  padding-left: 37px;
+  padding-left: 38px;
   position: relative;
   cursor: pointer;
 }
@@ -600,9 +638,10 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 .filters h3 {
   font-family: 'PT Sans Bold';
   font-size: 16px;
-  line-height: 21px;
+  line-height: 17px;
   text-transform: uppercase;
   margin: 0;
+
 
 }
 .filter-hotel form{
@@ -611,8 +650,13 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 }
 
 .home {
-  margin-right: 205px;
+  margin-right: 233px;
 }
+
+.home label {
+  margin-left: 9px;
+}
+
 
     /* Цены - шкала */
 
@@ -622,15 +666,17 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 }
 
 .price h3 {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
+  margin-left: 3px;
 }
 .price-controls {
   height: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border: 2px solid #ffffff;
   border-radius: 2px;
   font-size: 0;
   position: relative;
+  padding-bottom: 1px;
 }
 .price-controls::after {
   content:"";
@@ -641,6 +687,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-left: 2px;
 }
 
 .price-controls label {
@@ -650,11 +697,17 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   vertical-align: top;
   cursor: pointer;
 }
-.price-controls .min-price,
+.price-controls .min-price {
+  width: 100px;
+  padding-left: 67px;
+}
+
 .price-controls .max-price {
   width: 100px;
-  padding-left: 55px;
+  padding-left: 46px;
+
 }
+
 .price-controls input {
   width: 70px;
   margin: 0px;
@@ -669,12 +722,13 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 
 .range {
   position: relative;
-  margin-bottom: 37px;
+  margin-bottom: 32px;
 }
 
 .range .track {
   height: 2px;
-  background: rgba(255, 255, 255, 0.3)
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: -2px;
 }
 
 .range .bar {
@@ -687,14 +741,14 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   top: -9px;
   width: 4px;
   height: 4px;
+  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.3);
   border: 8px solid #ffffff;
   background: #ababab;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
 
-.runner-min {
+.ranner-min {
   left: 0;
 }
 
@@ -703,7 +757,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 }
 
 .runner:hover {
-  border: 9px solid #ffffff;
+  transform: scale(1.1,1.1);
 }
 
 .price .button {
@@ -714,10 +768,16 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   border-radius: 2px;
   cursor: pointer;
   margin: 0 auto;
+  font-family: PT Sans, Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
+  line-height: 21px;
   text-transform: uppercase;
   display: block;
+  width: 137px;
+  height: 36px;
+  box-sizing: border-box;
+  margin-left: 86px;
 }
 
 .price .button:hover {
@@ -733,12 +793,14 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   font-family: 'PT Sans Bold';
   font-size: 21px;
   line-height: 26px;
+  margin: 0;
+
 }
 
 .result-choice {
   display: flex;
   padding-top: 32px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   border-bottom: 1px solid #f2f2f2;
   box-sizing: border-box;
   justify-content: flex-start;
@@ -752,6 +814,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   font-size: 12px;
   line-height: 18px;
   margin-left: 48px;
+  padding-top: 1px;
 }
 
 .result-choice a {
@@ -787,15 +850,25 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   margin-left: 40px;
 }
 
-.result-choice > a:nth-of-type(2),
-.result-choice > a:nth-of-type(3) {
-  margin-left: 35px;
+.result-choice > a:nth-of-type(2) {
+  margin-left: 32px;
 }
+
+
+.result-choice > a:nth-of-type(3) {
+  margin-left: 33px;
+}
+
 
 .result-choice .arrow a {
   color: #cacaca;
   text-decoration: none;
   border: none;
+}
+
+.result-choice .arrow a:first-child {
+  margin-top: 1px;
+  padding-right: 9px;
 }
 
 .result-choice .arrow a:hover {
@@ -822,35 +895,57 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 
 .result-list li {
   display: flex;
-  padding: 30px 0;
-  border: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
   padding-left: 6%;
   padding-right: 6%;
-  height: 150px;
-  box-sizing: border-box;
-  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 31px;
+  position:relative;
+}
+
+.result-list li > a{
+  display: flex;
   align-items: flex-end;
+  margin-right: 30px;
 }
 
-.result-list img{
-  display: block;
-}
 
-.variant {
-  margin-left: -500px;
-}
 .variant .name {
   margin-bottom: 7px;
 }
 
+
 .rating {
-  padding: 7px 13px 7px 16px;
+  position: absolute;
+  bottom: 29px;
+  right: 72px;
+  padding: 4px 13px 5px 16px;
   background: #f2f2f2;
+  color: #666666;
 }
+
+.stars {
+  position: absolute;
+  top: 28px;
+  right: 72px;
+  letter-spacing: 2px;
+}
+
+
+
+.star {
+  display: inline-block;
+  background: url('../img/star.svg') no-repeat;
+  width: 18px;
+  height: 17px;
+  }
+
+
 
 .details,
 .book {
   display: inline-block;
+  color: #333333;
 }
 
 .name a {
@@ -876,9 +971,9 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   display: block;
   height: 27px;
   text-align: center;
-  vertical-align: middle;
   margin-top: 13px;
 }
+
 
 .details a {
   width: 110px;
@@ -895,7 +990,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 }
 
 .book {
- margin-left: 5px;
+ margin-left: 2px;
 }
 
 .book a {
