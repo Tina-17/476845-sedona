@@ -352,7 +352,7 @@ img {
   width: 568px;
   height: 395px;
   background: #ffffff;
-  padding: 55px;
+  padding: 55px 54px;
   box-sizing: border-box;
   margin-left: 315px;
 }
@@ -365,6 +365,7 @@ img {
   align-self: center;
   flex-grow: 1;
   padding-left: 3px;
+  padding-bottom: 2px;
 }
 
 .search-form .in,
@@ -409,7 +410,7 @@ img {
 
 .search-form .calendar {
   border: none;
-  margin: 0;
+  margin: 0 0 3px 0;
   padding: 0;
   background: transparent;
   width: 21px;
@@ -482,7 +483,6 @@ svg {
    height: 58px;
    background: #81b3d2;
    border: none;
-   padding: 3px 0 0 0;
    font-family: 'PT Sans Bold';
    font-size: 21px;
    line-height: 26px;
@@ -490,7 +490,8 @@ svg {
    text-transform: uppercase;
    display: inline-block;
    cursor: pointer;
-   margin-top: 25px;
+   margin-top: 26px;
+   margin-left: 2px;
 }
 
 .search-form .find:hover {
@@ -527,7 +528,7 @@ svg {
   font-family: 'PT Sans Bold';
   font-size: 21px;
   line-height: 26px;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .footer-social ul {
@@ -562,6 +563,7 @@ svg {
 .logo-academy-picture {
   display: inline-block;
   vertical-align: middle;
+  padding-top: 2px;
 }
 
 .main-footer .author{
@@ -569,6 +571,7 @@ svg {
   font-size: 14px;
   padding-right: 4px;
   display: inline-block;
+  margin-bottom: 16px;
 }
 
 .main-footer .logo-academy-picture:hover{
@@ -636,7 +639,6 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   background: url('../img/checkbox-on-disabled.svg') no-repeat;
 }
 
-
 .filter-hotel form {
   display: flex;
   flex-wrap: wrap;
@@ -659,9 +661,8 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
   line-height: 17px;
   text-transform: uppercase;
   margin: 0;
-
-
 }
+
 .filter-hotel form{
   background: url('../img/filter-background.jpg');
   color: #ffffff;
@@ -672,7 +673,8 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 }
 
 .home label {
-  margin-left: 9px;
+  margin-left: 3px;
+  padding-left: 41px;
 }
 
 
@@ -723,7 +725,6 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator {
 .price-controls .max-price {
   width: 100px;
   padding-left: 46px;
-
 }
 
 .price-controls input {
