@@ -1,23 +1,23 @@
 
 
 @font-face  {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('fonts/ptsans/PTSans/PTS55F.ttf');
+  src: url("fonts/ptsans/PTSans/PTS55F.ttf");
 }
 
 @font-face  {
-  font-family: 'PT Sans Bold';
-  font-style: bold;
+  font-family: "PT Sans";
+  font-style: normal;
   font-weight: 700;
-  src: url('fonts/ptsans/PTSans/PTS75F.ttf');
+  src: url("fonts/ptsans/PTSans/PTS75F.ttf");
 }
 
 body  {
   margin: 0;
   padding: 0;
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   color: #000000;
   background-color: #f2f2f2;
@@ -74,7 +74,7 @@ img  {
 
 .main-navigation  {
   line-height: 25px;
-  font-family: PT Sans Bold;
+  font-weight: 700;
   padding: 0;
   position: relative;
 }
@@ -131,7 +131,7 @@ img  {
 .big-photo  {
   display: block;
   background-color: #deebf3;
-  background-image: url('../img/sedona-mask.png'), url('../img/sedona-nature.jpg');
+  background-image: url("../img/sedona-mask.png"), url("../img/sedona-nature.jpg");
   background-repeat: no-repeat;
   height: 509px;
   text-align: center;
@@ -162,7 +162,7 @@ img  {
 
 .slogan h1  {
   font-size: 21px;
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   line-height: 25px;
   margin: 0;
   padding: 0 380px;
@@ -204,13 +204,17 @@ img  {
   padding-right: 121px;
   font-size: 21px;
   line-height: 21px;
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
 }
 
 .reasons p  {
   margin: 0;
   padding-left: 52px;
   padding-right: 54px;
+}
+
+.reasons-1-spec p  {
+  letter-spacing: 0.2px;
 }
 
 .reasons-2-spec p  {
@@ -248,7 +252,7 @@ img  {
 
 .reasons .number::before,
 .reasons .number::after  {
-  content: '\2014';
+  content: "\2014";
 }
 
 
@@ -271,17 +275,17 @@ img  {
 }
 
 .reasons-1-recommendation-house::before  {
-  content: url('../img/icon-1.svg');
+  content: url("../img/icon-1.svg");
   display: block;
 }
 
 .reasons-1-recommendation-food::before  {
-  content: url('../img/icon-3.svg');
+  content: url("../img/icon-3.svg");
   display: block;
 }
 
 .reasons-1-recommendation-souvenir::before  {
-  content: url('../img/icon-2.svg');
+  content: url("../img/icon-2.svg");
   display: block;
 }
 
@@ -343,7 +347,7 @@ img  {
 
 
 .search p:first-child  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   padding-top: 50px;
@@ -353,7 +357,6 @@ img  {
 }
 
 .search p:nth-child(2)  {
-  font-family: 'PT Sans';
   font-size: 14px;
   line-height: 24px;
   padding-bottom: 47px;
@@ -368,7 +371,7 @@ img  {
    min-height: 85px;
    background: #766357;
    color: #ffffff;
-   font-family: 'PT Sans Bold';
+   font-weight: 700;
    font-size: 21px;
    line-height: 87px;
    text-align: center;
@@ -385,7 +388,7 @@ img  {
 }
 
 .map  {
-  background-image: url('../img/state-map.jpg');
+  background-image: url("../img/state-map.jpg");
   background-repeat: no-repeat;
   width: 1200px;
   height: 593px;
@@ -409,7 +412,7 @@ img  {
 }
 
 .search-form label  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 14px;
   line-height: 26px;
   cursor: pointer;
@@ -446,7 +449,7 @@ img  {
 }
 
 .search-form input  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
@@ -497,8 +500,8 @@ svg  {
   outline: none;
 }
 
-.search-form input[name='child'],
-.search-form input[name='big']  {
+.search-form input[name="child"],
+.search-form input[name="big"]  {
   width: 37px;
   margin-left: 0;
 
@@ -513,29 +516,29 @@ svg  {
 }
 
 .search-form .change-plus  {
-  background: #f2f2f2 url('../img/plus.png') no-repeat;
+  background: #f2f2f2 url("../img/plus.png") no-repeat;
   background-position: 50% 50%;
 }
 
 .search-form .change-minus  {
-  background: #f2f2f2 url('../img/minus.png') no-repeat;
+  background: #f2f2f2 url("../img/minus.png") no-repeat;
   background-position: 50% 50%;
 }
 
 .search-form .change-minus:hover  {
-  background: #f2f2f2 url('../img/minus-1.png') 50% 50% no-repeat;
+  background: #f2f2f2 url("../img/minus-1.png") 50% 50% no-repeat;
 }
 .search-form .change-plus:hover  {
-  background: #f2f2f2 url('../img/plus-1.png') 50% 50% no-repeat;
+  background: #f2f2f2 url("../img/plus-1.png") 50% 50% no-repeat;
 }
 
 .search-form .change-minus:active  {
-  background: #f2f2f2 url('../img/minus-2.png') 50% 50% no-repeat;
+  background: #f2f2f2 url("../img/minus-2.png") 50% 50% no-repeat;
   outline: none;
 }
 
 .search-form .change-plus:active  {
-  background: #f2f2f2 url('../img/plus-2.png') 50% 50% no-repeat;
+  background: #f2f2f2 url("../img/plus-2.png") 50% 50% no-repeat;
   outline: none;
 }
 
@@ -544,7 +547,7 @@ svg  {
    height: 58px;
    background: #81b3d2;
    border: none;
-   font-family: 'PT Sans Bold';
+   font-weight: 700;
    font-size: 21px;
    line-height: 26px;
    color: #ffffff;
@@ -579,7 +582,7 @@ svg  {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 26px 101px 24px 132px;
+  padding: 24px 101px 24px 132px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-pack: justify;
@@ -593,7 +596,7 @@ svg  {
 }
 
 .main-footer .footer-hashtag  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   margin-bottom: 25px;
@@ -684,32 +687,32 @@ main.inner  {
   cursor: pointer;
 }
 
-label input[type='checkbox'] + .checkbox-indicator  {
+label input[type="checkbox"] + .checkbox-indicator  {
   display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
   width: 27px;
   height: 23px;
-  background: url('../img/checkbox-off.svg') no-repeat;
+  background: url("../img/checkbox-off.svg") no-repeat;
 }
 
-label input[type='checkbox']:checked + .checkbox-indicator  {
+label input[type="checkbox"]:checked + .checkbox-indicator  {
   width: 27px;
   height: 23px;
-  background: url('../img/checkbox-on.svg') no-repeat;
+  background: url("../img/checkbox-on.svg") no-repeat;
 }
 
-label input[type='checkbox']:disabled + .checkbox-indicator  {
+label input[type="checkbox"]:disabled + .checkbox-indicator  {
   width: 27px;
   height: 23px;
-  background: url('../img/checkbox-off-disabled.svg') no-repeat;
+  background: url("../img/checkbox-off-disabled.svg") no-repeat;
 }
 
-label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
+label input[type="checkbox"]:checked:disabled + .checkbox-indicator  {
   width: 27px;
   height: 23px;
-  background: url('../img/checkbox-on-disabled.svg') no-repeat;
+  background: url("../img/checkbox-on-disabled.svg") no-repeat;
 }
 
 .filter-hotel form  {
@@ -742,7 +745,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 }
 
 .filters h3  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 16px;
   line-height: 17px;
   text-transform: uppercase;
@@ -750,7 +753,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 }
 
 .filter-hotel form  {
-  background: url('../img/filter-background.jpg');
+  background: url("../img/filter-background.jpg");
   color: #ffffff;
 }
 
@@ -818,7 +821,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 .price-controls input  {
   width: 70px;
   margin: 0px;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-size: 14px;
   text-transform: uppercase;
@@ -876,7 +879,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   width: 137px;
   height: 36px;
@@ -893,7 +896,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 
 
 .result p  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   margin: 0;
@@ -1044,7 +1047,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 
 .star  {
   display: inline-block;
-  background: url('../img/star.svg') no-repeat;
+  background: url("../img/star.svg") no-repeat;
   width: 18px;
   height: 17px;
 }
@@ -1056,7 +1059,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 }
 
 .name a  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -1072,7 +1075,7 @@ label input[type='checkbox']:checked:disabled + .checkbox-indicator  {
 
 .details a,
 .book a  {
-  font-family: 'PT Sans Bold';
+  font-weight: 700;
   font-size: 14px;
   line-height: 27px;
   color: #ffffff;
