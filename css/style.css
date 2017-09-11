@@ -4,14 +4,14 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans/PTSans/PTS55F.ttf");
+  src: url("../fonts/ptsans/PTSans/PTS55F.ttf");
 }
 
 @font-face  {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans/PTSans/PTS75F.ttf");
+  src: url("../fonts/ptsans/PTSans/PTS75F.ttf");
 }
 
 body  {
@@ -24,6 +24,7 @@ body  {
   font-size: 14px;
   line-height: 21px;
   position: relative;
+  min-width: 1200px;
 }
 
 .site-shadow  {
@@ -148,7 +149,7 @@ img  {
 
 .slogan  {
   padding-top: 61px;
-  padding-bottom: 50px;
+  padding-bottom: 51px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -209,17 +210,13 @@ img  {
 
 .reasons p  {
   margin: 0;
-  padding-left: 52px;
+  padding-left: 54px;
   padding-right: 54px;
-}
-
-.reasons-1-spec p  {
-  letter-spacing: 0.2px;
 }
 
 .reasons-2-spec p  {
   padding-left: 47px;
-  padding-right: 50px;
+  padding-right: 46px;
 }
 
 .reasons-3 p,
@@ -247,7 +244,7 @@ img  {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 47px;
-  padding-bottom: 57px;
+  padding-bottom: 59px;
 }
 
 .reasons .number::before,
@@ -304,8 +301,8 @@ img  {
           justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 62px;
-  padding-bottom: 81px;
+  padding-top: 60px;
+  padding-bottom: 83px;
 }
 
 .reasons-1-recommendation-souvenir  {
@@ -368,14 +365,15 @@ img  {
 .search-button  {
    display: block;
    width: 568px;
-   min-height: 85px;
+   min-height: 86px;
    background: #766357;
    color: #ffffff;
+   font-family: "PT Sans", Arial, sans-serif;
    font-weight: 700;
    font-size: 21px;
-   line-height: 87px;
    text-align: center;
-   margin: 0 auto;
+   box-sizing: border-box;
+   padding-top: 32px;
 }
 
 .search-button:hover  {
@@ -387,11 +385,10 @@ img  {
     color: #857871;
 }
 
-.map  {
-  background-image: url("../img/state-map.jpg");
-  background-repeat: no-repeat;
-  width: 1200px;
-  height: 593px;
+.search-wrapper  {
+  position: relative;
+  margin: 0 auto;
+  width: 568px;
 }
 
 .search-form  {
@@ -408,7 +405,7 @@ img  {
   padding: 55px 54px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 315px;
+  position: absolute;
 }
 
 .search-form label  {
@@ -421,8 +418,7 @@ img  {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-left: 3px;
-  padding-bottom: 2px;
+  padding-left: 2px;
 }
 
 .search-form .in,
@@ -449,6 +445,8 @@ img  {
 }
 
 .search-form input  {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
   font-weight: 700;
   font-size: 14px;
   line-height: 26px;
@@ -504,7 +502,8 @@ svg  {
 .search-form input[name="big"]  {
   width: 37px;
   margin-left: 0;
-
+  text-align: center;
+  padding: 0;
 }
 .search-form .change-minus,
 .search-form .change-plus  {
@@ -547,6 +546,7 @@ svg  {
    height: 58px;
    background: #81b3d2;
    border: none;
+   font-family: "PT Sans", Arial, sans-serif;
    font-weight: 700;
    font-size: 21px;
    line-height: 26px;
@@ -565,6 +565,14 @@ svg  {
 .search-form .find:active  {
   background: #5496bd;
   color: #88b6d1;
+}
+
+.map  {
+  background-color: #ebe8df;
+  background-image: url("../img/state-map.jpg");
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 593px;
 }
 
 .search-form  {
@@ -639,12 +647,13 @@ svg  {
   display: inline-block;
   vertical-align: middle;
   padding-top: 2px;
+  margin-right: -2px;
 }
 
 .main-footer .author  {
   line-height: 21px;
   font-size: 14px;
-  padding-right: 4px;
+  padding-right: 5px;
   display: inline-block;
   margin-bottom: 16px;
 }
@@ -821,7 +830,7 @@ label input[type="checkbox"]:checked:disabled + .checkbox-indicator  {
 .price-controls input  {
   width: 70px;
   margin: 0px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
   text-transform: uppercase;
@@ -846,6 +855,7 @@ label input[type="checkbox"]:checked:disabled + .checkbox-indicator  {
   width: 80%;
   background: #ffffff;
 }
+
 .range .runner  {
   position:absolute;
   top: -9px;
@@ -1084,7 +1094,6 @@ label input[type="checkbox"]:checked:disabled + .checkbox-indicator  {
   text-align: center;
   margin-top: 13px;
 }
-
 
 .details a  {
   width: 110px;
